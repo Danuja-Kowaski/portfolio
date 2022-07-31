@@ -1,5 +1,5 @@
 import React from 'react';
-import MyProfile from '../assets/profile_picture.jpeg';
+import MyProfile from '../assets/danuja.png';
 import {AiOutlineArrowRight} from 'react-icons/ai';
 
 
@@ -32,9 +32,8 @@ const Home = () => {
                 </div>
 
                 <div>
-                <img src={MyProfile} alt='working' 
-                className='rounded-2xl mx-auto w-2/3 md:w-full'
-                width="100" height="100"/>
+                {/* <img src={MyProfile} alt='working' 
+                className='rounded-2xl mr-auto w-2/3 md:w-full'/> */}
                 </div>
             </div>
         </div>

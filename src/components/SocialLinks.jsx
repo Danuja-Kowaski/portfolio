@@ -1,14 +1,68 @@
 import React from 'react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaMailBulk, FaPortrait } from 'react-icons/fa';
 
 
 const SocialLinks =() =>{
+
+  const links = [
+    {
+      id: 1,
+      child: (
+        <>
+        LinkedIn <FaLinkedin size={25}/>
+        </>  
+      ),
+      href:'https://www.linkedin.com/in/danuja-silva-536766195/',
+      style:'rounded-tr-md'
+    },
+    {
+      id: 2,
+      child: (
+        <>
+        Mail <FaMailBulk size={25}/>
+        </>  
+      ),
+      href:'mailto:danuja.kowaski@gmail.com',
+      style:'rounded-tr-md'
+    },
+    {
+      id: 3,
+      child: (
+        <>
+        Github <FaGithub size={25}/>
+        </>  
+      ),
+      href:'https://www.github.com/danuja-kowaski/',
+      style:'rounded-tr-md'
+    },
+    {
+      id: 4,
+      child: (
+        <>
+        Resume <FaPortrait size={25}/>
+        </>  
+      ),
+      href:'/Danuja_CV.pdf',
+      style:'rounded-tr-md',
+      download: true,
+    }
+
+  ]
   return (
-    <div>
+    <div className='hidden lg:flex flex-col top-[35%] left-0 fixed'>
         <ul>
-            <li>
-                <a href=''>LinkedIn <FaLinkedin/></a>
+          {links.map( ({id, child, href, style, download})=> (
+            <li key={id} className={'flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] duration-300 bg-gray-500' + " " + style}>
+                <a href={href} 
+                className='flex justify-between items-center w-full text-white'
+                download={download}
+                target="_blank"
+                rel="noreferrer">
+                  {child}
+                  </a>
             </li>
+          )) }
+            
         </ul>
     </div>
   )
