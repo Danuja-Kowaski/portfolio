@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { FaBars, FaTimes } from "react-icons/fa";
+import Typewriter from 'typewriter-effect';
+import {Link} from 'react-scroll';
 
 const Navbar = () => {
     //to set the icons state
@@ -12,10 +14,6 @@ const Navbar = () => {
         },
         {
             id:2,
-            link:"about"
-        },
-        {
-            id:3,
             link:"portfolio"
         },
         {
@@ -32,17 +30,27 @@ const Navbar = () => {
          text-white bg-black fixed'>
         <div>
             {/* use different custom font */}
-            <h1 className='text-5xl'>Danuja</h1>
+            <div className='text-5xl font-signature'>
+            <Typewriter
+            options={{autoStart: true,
+            loop: true,
+            delay: 40,
+            strings:[
+                "Danuja",
+                "دانا",
+                "ダニュジャ"    
+            ]}}/>
+            </div>
         </div>
         <ul className='hidden md:flex'>
             {links.map( ({ id, link }) =>(
                 <li key={id} className='px-4 cursor-pointer capitalize font-medium
-                     text-gray-500 hover:scale-105 duration-200'>
-                        {link}
+                text-white hover:scale-105 duration-200'>
+                        <Link to={link} smooth duration={500}>{link}</Link>
                      </li>
             ))}
         </ul>
-        <div onClick={() => setNav(!nav)}className='cursor-pointer pr-4 z-10 text-gray-500 md:hidden'>
+        <div onClick={() => setNav(!nav)}className='cursor-pointer pr-4 z-10 text-white md:hidden'>
             { nav ? <FaTimes size={30}/> : <FaBars size={30}/>}
         </div>
         { nav && (
