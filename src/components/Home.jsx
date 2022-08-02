@@ -43,13 +43,13 @@ const Home = () => {
           </div>
         </div>
 
-        <div>
+        {/* <div>
           <img
             src={MyProfile}
             alt="my profile"
             className="rounded-2xl mx-auto w-2/3 md:w-full"
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );
