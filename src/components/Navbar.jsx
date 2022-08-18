@@ -37,8 +37,7 @@ const Navbar = () => {
             delay: 40,
             strings:[
                 "Danuja",
-                "دانا",
-                "ダニュジャ"    
+                "دانا",   
             ]}}/>
             </div>
         </div>
