@@ -24,7 +24,7 @@ const Home = () => {
                 "ML enthusiast"           
                 ]}}/>
           </div>
-          <p className="text-gray-500 py-4 max-w-md">
+          <p className="text-gray-500 py-7 max-w-md">
             Junior developer willing to expand my knowledge & experience as a web developer and blockchain development
           </p>
 
@@ -43,13 +43,13 @@ const Home = () => {
           </div>
         </div>
 
-        <div>
+        {/* <div>
           <img
             src={MyProfile}
             alt="my profile"
             className="rounded-2xl mx-auto w-2/3 md:w-full"
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );
